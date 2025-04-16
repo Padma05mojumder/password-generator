@@ -4,7 +4,7 @@
 int main()
 {
     char name[100],ch,sc1,sc2,sc3,sc4,sc5,sc6,sc7;
-    int num,num1,a;
+    int num,num1,num2,num3,a;
     printf("\n Wondering to set a strong password? here is your 'PASSWORD-SETTER' to help you!");
     printf("\n It will suggest you strong password of 8 or 15 characters or a password between them.\n Not only between them but also it can suggest passwords of characters less or more than that.");
     printf("\n Give your name and you will get some strong passwords.You can select any one from them");
@@ -73,11 +73,15 @@ int main()
     }
     for(int j=num1;j<a;j++)
     {
-        printf("%c",name[j]);
+        if(name[j]==(char)32)
+        printf("%c",name[j+1]);
+    else
+    printf("%c",name[j]);
     }
     printf("\n\n");
     printf("2. ");
-    for(int i=1;i<=num1;i++){
+    num2=(rand()%2)+3;
+    for(int i=1;i<=num2;i++){
         num=(rand()%6)+1;
         if(num==1)
         {
@@ -124,17 +128,24 @@ int main()
     
         }
         }
-    for(int j=num1;j<a;j++)
+    for(int j=num2;j<a;j++)
     {
-        printf("%c",name[j]);
+        if(name[j]==(char)32)
+        {printf("%c",name[j+1]);}
+        else
+        {printf("%c",name[j]);}
     }
     printf("\n\n");
     printf("3. ");
-    for(int j=0;j<num1;j++)
+    num3=(rand()%2)+3;
+    for(int j=0;j<num3;j++)
     {
+        if(name[j]=='\b')
+        printf("%c",name[j+1]);
+        else
         printf("%c",name[j]);
     }
-    for(int i=num1;i<a;i++)
+    for(int i=num3;i<a;i++)
     {
         num=(rand()%6)+1;
         if(num==1)
@@ -183,8 +194,11 @@ int main()
     }
     printf("\n\n");
     printf("4. ");
-    for(int j=0;j<num1;j++)
+    for(int j=0;j<num3;j++)
     {
+        if(name[j]=='\b')
+        printf("%c",name[j+1]);
+        else
         printf("%c",name[j]);
     }
     for(int i=num1;i<a;i++)
