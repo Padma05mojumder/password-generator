@@ -1,0 +1,1 @@
+Wondering to set a strong password? Here is your "Password Generator" to help you! Give your full name and it will provide you strong, different passwords. Check it out and stop hackers to enter in your device!
